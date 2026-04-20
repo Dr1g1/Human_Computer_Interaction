@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8" />
+    <!-- bitno za telefone - sirina stranice=sirina ekrana uredjaja -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beka - Organizacija za udomljavanje životinja</title>
+
+    <!-- Google Fonts (Montserrat + Roboto Slab) -->
+    <!-- preconnect znaci da pretrazivac unapred uspostavlja konekciju sa serverom - brze ucitavanje fontova; brojevi u linkovima su za debljine -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto+Slab:wght@100;400;700&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap 5 CSS - ucitava bootstrap framework; bootstrap je css biblioteka -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons - biblioteka ikonica koje su vektorske -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+    <!-- Agency Theme CSS (StartBootstrap CDN(Content Delivery Network)) - ucitava startbootstrap agency temu -->
+    <link href="https://cdn.jsdelivr.net/npm/startbootstrap-agency@7.0.12/dist/css/styles.css" rel="stylesheet" />
+    <!-- ovo je poslednje ucitano pa moze da "pregazi" bootsrap stilove -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--id se koristi za scroll navigaciju - vodi na vrh stranice-->
+<body id="page-top">
+
+<!-- NAVBAR (navigacioni meni): -->
+<nav id="mainNav" class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <!--container je bootstrap klasa - centrira sadrzaj i daje mu sirinu-->
+    <div class="container">
+        <a class="navbar-brand" href="#page-top">
+        BEKA
+        </a>
+        <!--hamburger meni dugme: (navbar-toggler je bootstrap stil za hamburger dugme)-->
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="bi bi-three-dots-vertical"></i>
+        </button>
+        <!--deo koji se otvara/zatvara na dugme - povezani su iznad-->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto"> <!--bootstrap stil za navigacione linkove-->
+                <li class="nav-item"><a class="nav-link" href="#usluge">Šta radimo</a></li>
+                <li class="nav-item"><a class="nav-link" href="#zivotinje">Životinje</a></li>
+                <li class="nav-item"><a class="nav-link" href="#onama">O nama</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tim">Tim</a></li>
+                <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- MASTHEAD/HERO: -->
+<!--masthead je css klasa iz agency teme - definise izgled hero sekcije-->
+<header class="masthead">
+    <div class="container text-center">
+        <div class="reveal">
+            <p class="text-uppercase mb-2" style="font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:.2em;color:var(--accent);font-size:.85rem;">
+                Organizacija za udomljavanje životinja
+            </p>
+            <h1>Svaki ljubimac<br/><span>zaslužuje dom.</span></h1> <!--span omogucava da se drugi deo stilizuje posebno-->
+            <!--mt - margin top (razmak iznad teksta)-->
+            <p class="mt-3">
+                Pomažemo napuštenim životinjama da pronađu svoje vlasnike i topli dom.
+            </p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a class="btn btn-primary" href="#zivotinje">Udomite danas</a>
+            <a class="btn btn-outline-light" href="#onama">Saznajte više</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- STA RADIMO DEO: -->
+<section id="usluge">
+    <div class="container">
+        <div class="text-center reveal">
+            <h2 class="section-heading">Šta radimo</h2>
+            <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <i class="bi bi-heart-fill divider-custom-icon"></i>
+            <div class="divider-custom-line"></div>v
+        </div>
+        <p class="section-subheading">Radimo za dobrobit napuštenih životinja.</p>
+    </div>
+    <div class="row text-center g-4">
+
+    <div class="col-md-4 reveal">
+        <div class="service-item p-3">
+            <div class="service-icon"><i class="bi bi-house-heart"></i></div>
+            <h4>Udomljavanje</h4>
+            <p>Spajamo životinje sa porodicama i ljudima koji im mogu pružiti trajni dom pun ljubavi i pažnje.</p>
+        </div>
+    </div>
+
+    <div class="col-md-4 reveal">
+        <div class="service-item p-3">
+            <div class="service-icon"><i class="bi bi-capsule"></i></div>
+            <h4>Veterinarska briga</h4>
+            <p>Sve životinje u našem skloništu pregledane su od strane veterinara i vakcinisane.</p>
+        </div>
+    </div>
+
+    <div class="col-md-4 reveal">
+        <div class="service-item p-3">
+            <div class="service-icon"><i class="bi bi-scissors"></i></div>
+            <h4>Sterilizacija</h4>
+            <p>Nudimo usluge sigurne sterilizacije kako bismo smanjili broj napuštenih životinja na ulicama.</p>
+        </div>
+    </div>
+
+    <div class="col-md-4 reveal">
+        <div class="service-item p-3">
+          <div class="service-icon"><i class="bi bi-mortarboard"></i></div>
+          <h4>Edukacija</h4>
+          <p>Organizujemo radionice za decu i odrasle o odgovornom čuvanju i humanom postupanju prema životinjama.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 reveal">
+        <div class="service-item p-3">
+          <div class="service-icon"><i class="bi bi-geo-alt"></i></div>
+          <h4>Spašavanje</h4>
+          <p>Dežurni tim pronalazi i odgovara na pozive za povređene i napuštene životinje i pruža im hitnu medicinsku pomoć.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 reveal">
+        <div class="service-item p-3">
+          <div class="service-icon"><i class="bi bi-currency-euro"></i></div>
+          <h4>Donacije i volontiranje</h4>
+          <p>Svaki doprinos, novčani ili volonterski, direktno pomaže životinjama u skloništu. Pridružite nam se!</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ZIVOTINJE DEO: -->
+<section id="zivotinje">
+    <div class="container">
+        <div class="text-center reveal">
+            <h2 class="section-heading">Životinje čekaju dom</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+            <i class="bi bi-paw-fill divider-custom-icon"></i>
+            <div class="divider-custom-line"></div>
+        </div>
+        <p class="section-subheading">Svaka od ovih životinja ima svoju priču i čeka baš tebe!</p>
+    </div>
+    <div class="row g-4">
+
+        <!-- Karta 1 -->
+        <div class="col-lg-4 col-md-6 reveal">
+            <div class="animal-card">
+                <img src="images/beni.jpeg" alt="Beni">
+                <div class="animal-card-body">
+                    <span class="badge-species">Pas</span>
+                    <h5 class="mt-2">Beni</h5>
+                    <p>4 meseca · Čistokrvni samojed · Ženka · Vakcinisana ✓</p>
+                    <p style="font-size:.82rem;color:#bbb;">Energična i druželjubiva, idealna za aktivne porodice sa velikim dvorištem. Odlična sa decom.</p>
+                    <a href="#kontakt" class="btn btn-primary btn-sm">Udomite Beni</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Karta 2 -->
+        <div class="col-lg-4 col-md-6 reveal">
+            <div class="animal-card">
+                <img src="images/mica.jpeg" alt="Mica">
+                <div class="animal-card-body">
+                    <span class="badge-species">Mačka</span>
+                    <h5 class="mt-2">Mica</h5>
+                    <p>4 godine · Domaća kratke dlake · Mužjak · Sterilisan ✓ · Vakcinisan ✓</p>
+                    <p style="font-size:.82rem;color:#bbb;">Miran, sa jasnim personalnim granicama ali dovoljno strpljiv. Traži tiho i toplo okruženje.</p>
+                    <a href="#kontakt" class="btn btn-primary btn-sm">Udomite Micu</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Karta 3 -->
+        <div class="col-lg-4 col-md-6 reveal">
+            <div class="animal-card">
+                <img src="images/keti.jpeg" alt="Keti">
+                <div class="animal-card-body">
+                    <span class="badge-species">Mačka</span>
+                    <h5 class="mt-2">Keti</h5>
+                    <p>2 godine · Domaća kratke dlake · Ženka · Vakcinisana ✓</p>
+                    <p style="font-size:.82rem;color:#bbb;">Miroljubiva i umiljata, voli decu i igru.</p>
+                    <a href="#kontakt" class="btn btn-primary btn-sm">Udomite Keti</a>
+                </div>    
+            </div>
+        </div>
+
+        <!-- Karta 4 -->
+        <div class="col-lg-4 col-md-6 reveal">
+            <div class="animal-card">
+                <img src="https://images.unsplash.com/photo-1617398881039-4c977f633b0e?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Micko">
+                <div class="animal-card-body">
+                    <span class="badge-species">Zec</span>
+                    <h5 class="mt-2">Mićko</h5>
+                    <p>1 godina · Kratkouhi beli · Mužjak · Sterilisan ✓ · Vakcinisan ✓</p>
+                    <p style="font-size:.82rem;color:#bbb;">Radoznao, umiljat i lako se navikava na novu sredinu.</p>
+                    <a href="#kontakt" class="btn btn-primary btn-sm">Udomite Mićka</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Karta 5 -->
+        <div class="col-lg-4 col-md-6 reveal">
+            <div class="animal-card">
+                <img src="images/Ljubomir.jpeg" alt="Ljubomir">
+                <div class="animal-card-body">
+                    <span class="badge-species">Mačka</span>
+                    <h5 class="mt-2">Ljubomir</h5>
+                    <p>7 godina · Domaća kratkodlaka · Mužjak · Vakcinisan ✓</p>
+                    <p style="font-size:.82rem;color:#bbb;">Miran, blage naravi i dobar sa decom.</p>
+                    <a href="#kontakt" class="btn btn-primary btn-sm">Udomite Ljubomira</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Karta 6 -->
+        <div class="col-lg-4 col-md-6 reveal">
+            <div class="animal-card">
+                <img src="https://images.unsplash.com/photo-1452721226468-f95fb66ebf83?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ana">
+                <div class="animal-card-body">
+                    <span class="badge-species">Hrčak</span>
+                    <h5 class="mt-2">Ana</h5>
+                    <p>2 meseca · Hrčak · Ženski · Vakcinisan ✓</p>
+                    <p style="font-size:.82rem;color:#bbb;">Sve što je lepo kratko traje.</p>
+                    <a href="#kontakt" class="btn btn-primary btn-sm">Udomite Anu</a>
+            </div>
+            </div>
+        </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- O NAMA DEO: -->
+<section id="onama">
+    <div class="container">
+        <div class="text-center reveal">
+            <h2 class="section-heading">O nama</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <i class="bi bi-star-fill divider-custom-icon"></i>
+                <div class="divider-custom-line"></div>
+            </div>
+        </div>
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 reveal">
+                <img src="images/BeniCarli.jpeg"
+                    alt="O nama" class="img-fluid w-100" />
+            </div>
+            <div class="col-lg-6 reveal">
+                <h3>Naša misija</h3>
+                <p>
+                    Organizacija <strong>Beka</strong> osnovana je 2016. godine sa ciljem smanjenja broja napuštenih životinja
+                    i pružanja adekvatne brige svim životinjama kojima je potrebna pomoć. Naše sklonište u Nišu svakodnevno
+                    brine o više od 80 pasa i 40 mačaka kao i o velikom broju drugih vrsta.
+                </p>
+                <p>
+                    Verujemo da svaka životinja zaslužuje šansu za srećan život. Naš tim volontera i profesionalnih
+                    veterinara radi bez prestanka kako bi osigurao da sve životinje budu zdrave, zbrinute i spremne
+                    za udomljavanje.
+                </p>
+                <p>
+                    Do danas smo udomili više od <strong>1.200 životinja</strong> i nastavljamo da rastemo zahvaljujući
+                    podršci zajednice, donatora i volontera koji dele našu viziju.
+                </p>
+                <!-- Statistike -->
+                <div class="row text-center mt-4 g-3">
+                    <div class="col-4">
+                        <span class="stat-number">1.200+</span>
+                        <span class="stat-label">Udomljenih</span>
+                    </div>
+                    <div class="col-4">
+                        <span class="stat-number">120+</span>
+                        <span class="stat-label">U skloništu</span>
+                    </div>
+                    <div class="col-4">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Volontera</span>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <a href="#kontakt" class="btn btn-primary">Postani volonter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TIM DEO:-->
+<section id="tim">
+  <div class="container">
+    <div class="text-center reveal">
+      <h2 class="section-heading">Naš tim</h2>
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <i class="bi bi-people-fill divider-custom-icon"></i>
+        <div class="divider-custom-line"></div>
+      </div>
+      <p class="section-subheading">Srce organizacije čine posvećeni ljudi koji ne odustaju.</p>
+    </div>
+    <div class="row justify-content-center g-4">
+
+      <div class="col-lg-3 col-md-6 text-center reveal">
+        <div class="team-member">
+          <img src="images/mila.jpeg" alt="Mila Jović">
+          <h4 class="mt-3">Mila Jović</h4>
+          <p class="text-muted">Osnivač i direktor</p>
+          <div class="social-links">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 text-center reveal">
+        <div class="team-member">
+          <img src="images/draga2.jpeg" alt="Dr. Draga Jović">
+          <h4 class="mt-3">Dr. Draga Jović</h4>
+          <p class="text-muted">Glavni veterinar</p>
+          <div class="social-links">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 text-center reveal">
+        <div class="team-member">
+          <img src="images/mina.jpeg" alt="Mina Krasić">
+          <h4 class="mt-3">Mina Krasić</h4>
+          <p class="text-muted">Koordinator volontera</p>
+          <div class="social-links">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 text-center reveal">
+        <div class="team-member">
+          <img src="images/uros2.jpeg" alt="Uroš Stefanović">
+          <h4 class="mt-3">Uroš Stefanović</h4>
+          <p class="text-muted">Terenski spasilac</p>
+          <div class="social-links">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT DEO:-->
+<section id="kontakt">
+    <div class="container">
+        <div class="text-center reveal">
+            <h2 class="section-heading">Kontaktirajte nas</h2>
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <i class="bi bi-envelope-heart-fill divider-custom-icon"></i>
+                <div class="divider-custom-line"></div>
+            </div>
+            <p class="section-subheading">Imate pitanje o udomljavanju ili želite da pomognete? Pišite nam!</p>
+        </div>
+
+        <div class="row g-5">
+            <!-- Forma -->
+            <div class="col-lg-7 reveal">
+                <div id="contactAlert" class="alert d-none" role="alert"></div>
+                <div class="mb-3">
+                    <label for="inputName">Ime i prezime</label>
+                    <input type="text" id="inputName" class="form-control" placeholder="Vaše ime..." />
+                </div>
+                <div class="mb-3">
+                    <label for="inputEmail">E-mail adresa</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="vasa@email.com" />
+                </div>
+                <div class="mb-3">
+                    <label for="inputPhone">Telefon (opciono)</label>
+                    <input type="tel" id="inputPhone" class="form-control" placeholder="+381 ..." />
+                </div>
+                <div class="mb-3">
+                    <label for="inputMessage">Poruka</label>
+                    <textarea id="inputMessage" class="form-control" rows="5" placeholder="Poruka..."></textarea>
+                </div>
+                    <button class="btn btn-primary" onclick="sendMessage()">Pošaljite poruku</button>
+            </div>
+
+            <!-- Info -->
+            <div class="col-lg-5 reveal">
+                <div class="contact-info-item">
+                    <i class="bi bi-geo-alt-fill"></i>
+                <div>
+                    <h6>Adresa</h6>
+                    <p>Ul. Ljubimaca bb, Sklonište Beka<br/>18000 Niš, Srbija</p>
+                </div>
+            </div>
+            <div class="contact-info-item">
+                <i class="bi bi-telephone-fill"></i>
+                <div>
+                    <h6>Telefon</h6>
+                    <p>+381 55 555 5555</p>
+                </div>
+            </div>
+            <div class="contact-info-item">
+                <i class="bi bi-envelope-fill"></i>
+                <div>
+                    <h6>E-mail</h6>
+                    <p>info@bekaskloniste.rs</p>
+                </div>
+            </div>
+            <div class="contact-info-item">
+                <i class="bi bi-clock-fill"></i>
+                <div>
+                    <h6>Radno vreme</h6>
+                    <p>Pon - Pet: 08:00 - 19:00<br/>Sub: 9:00 - 17:00</p>
+                </div>
+            </div>
+            <div class="mt-4">
+                <p style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:#bbb;">Pratite nas</p>
+                <div class="d-flex gap-3" style="font-size:1.8rem;">
+                    <a href="#" style="color:#888;transition:color .2s;" onmouseover="this.style.color='#f5a623'" onmouseout="this.style.color='#888'"><i class="bi bi-facebook"></i></a>
+                    <a href="#" style="color:#888;transition:color .2s;" onmouseover="this.style.color='#f5a623'" onmouseout="this.style.color='#888'"><i class="bi bi-instagram"></i></a>
+                    <a href="#" style="color:#888;transition:color .2s;" onmouseover="this.style.color='#f5a623'" onmouseout="this.style.color='#888'"><i class="bi bi-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER: -->
+<footer>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 text-center text-lg-start mb-3 mb-lg-0">
+                <a class="footer-brand" href="#page-top">BEKA</a>
+            </div>
+            <div class="col-lg-4 text-center mb-3 mb-lg-0">
+                <div class="footer-links">
+                    <a href="#usluge">Šta radimo</a>
+                    <a href="#zivotinje">Životinje</a>
+                    <a href="#onama">O nama</a>
+                    <a href="#kontakt">Kontakt</a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="social-footer">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="mt-4" />
+        <div class="text-center">
+            <p class="mb-0" style="font-family:'Montserrat',sans-serif;font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;color:#555;">
+                &copy; 2026 Beka - Organizacija za udomljavanje životinja · Niš, Srbija
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- BOOTSTRAP JS: -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- CUSTOM JS: navbar shrink + scroll reveal + kontakt forma: -->
+<script>
+    const mainNav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 60) {
+            mainNav.classList.add('navbar-shrink');
+            mainNav.style.boxShadow = '0 4px 20px rgba(0,0,0,.5)';
+            mainNav.style.padding = '.5rem 0';
+        } else {
+            mainNav.classList.remove('navbar-shrink');
+            mainNav.style.boxShadow = 'none';
+            mainNav.style.padding = '1rem 0';
+        }
+    });
+
+    const sections = document.querySelectorAll('section[id], header.masthead');
+    const navLinks = document.querySelectorAll('#mainNav .nav-link');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 100) current = sec.id || 'page-top';
+        });
+        navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+        });
+    });
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => entry.target.classList.add('visible'), i * 80);
+            revealObserver.unobserve(entry.target);
+        }
+        });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // --- Kontakt forma ---
+    function sendMessage() {
+        const name = document.getElementById('inputName').value.trim();
+        const email = document.getElementById('inputEmail').value.trim();
+        const msg = document.getElementById('inputMessage').value.trim();
+        const alert = document.getElementById('contactAlert');
+        if (!name || !email || !msg) {
+            alert.className = 'alert alert-danger';
+            alert.textContent = '⚠️ Molimo popunite obavezna polja (ime, email i poruka).';
+            return;
+        }
+        alert.className = 'alert alert-success';
+        alert.textContent = '✅ Hvala, ' + name + '! Vaša poruka je poslana. Javit ćemo vam se uskoro.';
+        document.getElementById('inputName').value = '';
+        document.getElementById('inputEmail').value = '';
+        document.getElementById('inputPhone').value = '';
+        document.getElementById('inputMessage').value = '';
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+            const navCollapse = document.getElementById('navbarResponsive');
+            if (navCollapse.classList.contains('show')) {
+                new bootstrap.Collapse(navCollapse).hide();
+            }
+        }
+    });
+});
+</script>
+
+</body>
+</html>
